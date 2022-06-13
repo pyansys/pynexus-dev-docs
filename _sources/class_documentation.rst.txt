@@ -1,0 +1,21 @@
+***************************
+Generate APIs Documentation
+***************************
+
+Autosummary Directive
+~~~~~~~~~~~~~~~~~~~~~
+We use a custom class template (included in ``_template`` to
+automatically generate class and method documentation.
+
+.. autosummary::
+   :toctree: _autosummary/
+
+   ansys.pynexus.PyNexus
+   ansys.pynexus.PyNexus.visualize_report
+
+   :exclude-members: ansys.pynexus.PyItem.push
+   :exclude-members: ansys.pynexus.PyItem.__setattr__
+
+   ansys.pynexus.PyItem
+
+Note how each method or attribute has its own page.

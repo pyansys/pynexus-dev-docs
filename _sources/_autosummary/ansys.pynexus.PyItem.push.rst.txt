@@ -1,0 +1,6 @@
+push
+====
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyItem.push

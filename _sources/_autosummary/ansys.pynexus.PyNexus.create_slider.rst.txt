@@ -1,0 +1,6 @@
+create\_slider
+==============
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyNexus.create_slider

@@ -1,0 +1,28 @@
+﻿ansys.pynexus.PyItem
+====================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoclass:: PyItem
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      PyItem.push
+      
+      
+      PyItem.visualize
+      
+   
+   
+
+   
+   
+   

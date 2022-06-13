@@ -1,0 +1,6 @@
+connect
+=======
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyNexus.connect

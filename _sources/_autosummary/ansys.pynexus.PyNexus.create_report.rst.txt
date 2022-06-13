@@ -1,0 +1,6 @@
+create\_report
+==============
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyNexus.create_report

@@ -1,0 +1,6 @@
+visualize
+=========
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyItem.visualize

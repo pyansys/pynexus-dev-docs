@@ -1,0 +1,6 @@
+start
+=====
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyNexus.start
