@@ -33,6 +33,9 @@
       PyNexus.start
       
       
+      PyNexus.stop
+      
+      
       PyNexus.visualize_report
       
    

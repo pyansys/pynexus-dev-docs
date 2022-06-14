@@ -11,6 +11,7 @@ automatically generate class and method documentation.
    :toctree: _autosummary/
 
    ansys.pynexus.PyNexus
+   ansys.pynexus.PyNexus.stop
    ansys.pynexus.PyNexus.visualize_report
 
    :exclude-members: ansys.pynexus.PyItem.push

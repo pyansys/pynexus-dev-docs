@@ -1,0 +1,6 @@
+stop
+====
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyNexus.stop

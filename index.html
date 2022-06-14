@@ -9,8 +9,9 @@
     <title>PyAnsys Library Template &#8212; ansys-pynexus 0.1.dev0 documentation</title>
     
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,16 +21,15 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/pyansys_sphinx_theme.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
+    
+        <link href="_static/css/breadcrumbs.css" rel="stylesheet">
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -47,7 +47,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -97,24 +97,42 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pyansys-sphinx-theme" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pyansys-sphinx-theme" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
     
+    
+        <div class="container-xl">
+    <div class="row">
+        <div class="col-12 col-md-3" id="breadcrumbs-spacer"></div>
+        <div class="col-12 col-md-11 col-xl-9" id="breadcrumbs">
+          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+    
+    
+
+        <li class="nav-item nav-item-this"><a href="">PyAnsys Library Template</a></li> 
+      </ul>
+    </div>
+        </div>
+  </div>
+</div>
     
 
 
@@ -123,7 +141,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -133,6 +152,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -143,7 +165,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -213,11 +235,11 @@
               <div>
                 
   <section id="pyansys-library-template">
-<h1>PyAnsys Library Template<a class="headerlink" href="#pyansys-library-template" title="Permalink to this headline">¶</a></h1>
+<h1>PyAnsys Library Template<a class="headerlink" href="#pyansys-library-template" title="Permalink to this headline">#</a></h1>
 <p>This repository contains an API to connect to an Ansys Nexus service in an easy and
 pythonic way. The repository can be downloaded from <a class="reference external" href="https://github.com/pyansys/pynexus">this location</a>.</p>
 <section id="project-overview">
-<h2>Project Overview<a class="headerlink" href="#project-overview" title="Permalink to this headline">¶</a></h2>
+<h2>Project Overview<a class="headerlink" href="#project-overview" title="Permalink to this headline">#</a></h2>
 <p>PyNexus provides an API to connect to an Ansys Nexus service and manipulate its items and reports.
 Ansys Nexus is a service that allows the user to push items of many types (image, text, 3D scenes,
 table, …) into a database, keep them organize and create dynamic reports from them. The pynexus
@@ -225,7 +247,7 @@ module allows the user fully access to all these capabilities in a natural and p
 To get more information about Ansys Nexus, please see <a class="reference external" href="https://nexusdemo.ensight.com/docs/html/Nexus.html">the Ansys Nexus documentation page</a>.</p>
 </section>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p>Include installation directions.  Note that this README will be
 included in your PyPI package, so be sure to include <code class="docutils literal notranslate"><span class="pre">pip</span></code>
 directions along with developer installation directions.  For example.</p>
@@ -246,11 +268,11 @@ directions along with developer installation directions.  For example.</p>
 </div>
 </section>
 <section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">#</a></h2>
 <p>Include a link to the full sphinx documentation.  For example <a class="reference external" href="https://docs.pyansys.com/">PyAnsys</a></p>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
 <p>Assume you already have an Ansys Nexus service running, and want to connect to it and add a new
 image item to its database. Then, visualize the report with only the items we just added. These
 few lines will do the trick.</p>
@@ -265,25 +287,25 @@ few lines will do the trick.</p>
 </div>
 </section>
 <section id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">#</a></h2>
 <p>You can feel free to include this at the README level or in CONTRIBUTING.md</p>
 </section>
 <section id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">#</a></h2>
 <p>Be sure to point out your license (and any acknowledgments).  State
 that the full license can be found in the root directory of the
 repository.</p>
 <div class="toctree-wrapper compound">
 </div>
 <section id="code-examples">
-<h3>Code Examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">¶</a></h3>
+<h3>Code Examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">#</a></h3>
 <p>Here’s a quick preview for how Python code looks using the
 <code class="docutils literal notranslate"><span class="pre">pyansys-pynexus</span></code>.  For more examples, click the links at the
 top of the page to see function, method, and class documentation.</p>
 </section>
 </section>
 <section id="rendered-python-code">
-<h2>Rendered Python Code<a class="headerlink" href="#rendered-python-code" title="Permalink to this headline">¶</a></h2>
+<h2>Rendered Python Code<a class="headerlink" href="#rendered-python-code" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
@@ -306,7 +328,8 @@ top of the page to see function, method, and class documentation.</p>
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

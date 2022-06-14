@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>push &#8212; ansys-pynexus 0.1.dev0 documentation</title>
+    <title>stop &#8212; ansys-pynexus 0.1.dev0 documentation</title>
     
     
   <!-- Loaded before other Sphinx assets -->
@@ -39,8 +39,8 @@
     <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="visualize" href="ansys.pynexus.PyItem.visualize.html" />
-    <link rel="prev" title="ansys.pynexus.PyItem" href="ansys.pynexus.PyItem.html" />
+    <link rel="next" title="visualize_report" href="ansys.pynexus.PyNexus.visualize_report.html" />
+    <link rel="prev" title="start" href="ansys.pynexus.PyNexus.start.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -131,8 +131,8 @@
     
 
           <li class="nav-item nav-item-1"><a href="../class_documentation.html" >Generate APIs Documentation</a> » </li>
-          <li class="nav-item nav-item-2"><a href="ansys.pynexus.PyItem.html" accesskey="U">ansys.pynexus.PyItem</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">push</a></li> 
+          <li class="nav-item nav-item-2"><a href="ansys.pynexus.PyNexus.html" accesskey="U">ansys.pynexus.PyNexus</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">stop</a></li> 
       </ul>
     </div>
         </div>
@@ -159,8 +159,8 @@
    ansys.pynexus.PyNexus
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ansys.pynexus.PyNexus.stop.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    stop
   </a>
  </li>
@@ -169,27 +169,10 @@
    visualize_report
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="ansys.pynexus.PyItem.html">
    ansys.pynexus.PyItem
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     push
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.pynexus.PyItem.visualize.html">
-     visualize
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -231,12 +214,30 @@
               
               <div>
                 
-  <section id="push">
-<h1>push<a class="headerlink" href="#push" title="Permalink to this headline">#</a></h1>
+  <section id="stop">
+<h1>stop<a class="headerlink" href="#stop" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
-<dt class="sig sig-object py" id="ansys.pynexus.PyItem.push">
-<span class="sig-prename descclassname"><span class="pre">PyItem.</span></span><span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.pynexus.PyItem.push" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="ansys.pynexus.PyNexus.stop">
+<span class="sig-prename descclassname"><span class="pre">PyNexus.</span></span><span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.pynexus.PyNexus.stop" title="Permalink to this definition">#</a></dt>
+<dd><p>Stop the Nexus server connected to this PyNexus session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a></dt><dd><p>True is able to stop the server. False otherwise</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.pynexus</span> <span class="kn">import</span> <span class="n">pynexus</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">pynexus</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">port</span> <span class="o">=</span> <span class="mi">8020</span><span class="p">,</span> <span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;mypsw&#39;</span><span class="p">,</span> <span class="n">db_dir</span> <span class="o">=</span> <span class="s1">&#39;/tmp/dbase&#39;</span><span class="p">)</span>
+<span class="go">&#39;a8098c1a-f86e-11da-bd1a-00112444be1e&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </section>
 
