@@ -1,0 +1,6 @@
+get\_session
+============
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyNexus.get_session

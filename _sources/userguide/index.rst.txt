@@ -1,0 +1,6 @@
+User Guide
+##########
+
+Setting up
+~~~~~~~~~~
+How to set up and use the ``pyansys-pynexus``.

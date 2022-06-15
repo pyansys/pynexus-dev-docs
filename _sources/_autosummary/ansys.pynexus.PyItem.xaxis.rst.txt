@@ -1,0 +1,6 @@
+xaxis
+=====
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.xaxis

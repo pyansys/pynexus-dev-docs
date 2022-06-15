@@ -1,0 +1,33 @@
+..
+   Just reuse the root readme to avoid duplicating the documentation.
+   Provide any documentation specific to your online documentation
+   here.
+
+.. include:: ../../README.rst
+
+.. toctree::
+
+   gettingstarted/index
+   userguide/index
+   class_documentation
+   examples/index
+
+Code Examples
+~~~~~~~~~~~~~
+Here's a quick preview for how Python code looks using the
+``pyansys-pynexus``.  For more examples, click the links at the
+top of the page to see function, method, and class documentation.
+
+Rendered Python Code
+--------------------
+
+.. code:: python
+
+   >>> import pyansys.pynexus as n
+   >>> nexus = n.PyNexus()
+   >>> nexus.connect()
+   True
+   >>> my_img = nexus.create_item()
+   >>> my_img.item_image = 'image.png'
+   >>> nexus.visualize_report()
+

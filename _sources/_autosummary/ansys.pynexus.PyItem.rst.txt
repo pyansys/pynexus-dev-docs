@@ -1,0 +1,40 @@
+﻿ansys.pynexus.PyItem
+====================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoclass:: PyItem
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      PyItem.visualize
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      
+      PyItem.title
+      
+      
+      PyItem.plot
+      
+      
+      PyItem.xaxis
+      
+   
+   

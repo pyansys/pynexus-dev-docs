@@ -1,0 +1,9 @@
+Getting Started
+###############
+
+Getting go
+~~~~~~~~~~
+The ``pyansys-pynexus`` module allows the user to
+access the Ansys Nexus capabilities, such as organizing
+data items into a database and creating automated reports.
+

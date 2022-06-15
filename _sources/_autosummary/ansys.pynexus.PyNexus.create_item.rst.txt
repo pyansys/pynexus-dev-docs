@@ -1,0 +1,6 @@
+create\_item
+============
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyNexus.create_item

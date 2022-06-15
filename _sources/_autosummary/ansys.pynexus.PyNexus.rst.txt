@@ -1,0 +1,46 @@
+﻿ansys.pynexus.PyNexus
+=====================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoclass:: PyNexus
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      PyNexus.connect
+      
+      
+      PyNexus.create_item
+      
+      
+      PyNexus.create_report
+      
+      
+      PyNexus.create_slider
+      
+      
+      PyNexus.get_session
+      
+      
+      PyNexus.start
+      
+      
+      PyNexus.stop
+      
+      
+      PyNexus.visualize_report
+      
+   
+   
+
+   
+   
+   

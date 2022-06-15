@@ -1,0 +1,6 @@
+visualize\_report
+=================
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyNexus.visualize_report

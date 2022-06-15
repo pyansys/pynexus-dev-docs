@@ -1,0 +1,6 @@
+Examples
+########
+
+PyNexus examples
+~~~~~~~~~~~~~~~~
+Example of usage of the ``pyansys-pynexus`` module.
