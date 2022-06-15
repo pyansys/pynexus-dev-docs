@@ -1,6 +1,6 @@
-***************************
-Generate APIs Documentation
-***************************
+*************
+API Reference
+*************
 
 Autosummary Directive
 ~~~~~~~~~~~~~~~~~~~~~
@@ -11,12 +11,4 @@ automatically generate class and method documentation.
    :toctree: _autosummary/
 
    ansys.pynexus.PyNexus
-   ansys.pynexus.PyNexus.stop
-   ansys.pynexus.PyNexus.visualize_report
-
-   :exclude-members: ansys.pynexus.PyItem.push
-   :exclude-members: ansys.pynexus.PyItem.__setattr__
-
    ansys.pynexus.PyItem
-
-Note how each method or attribute has its own page.

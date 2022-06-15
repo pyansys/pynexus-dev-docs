@@ -6,11 +6,11 @@
 .. include:: ../../README.rst
 
 .. toctree::
-   :hidden:
-   :maxdepth: 3
 
+   gettingstarted/index
+   userguide/index
    class_documentation
-
+   examples/index
 
 Code Examples
 ~~~~~~~~~~~~~

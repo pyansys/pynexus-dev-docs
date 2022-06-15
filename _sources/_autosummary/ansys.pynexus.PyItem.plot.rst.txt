@@ -1,6 +1,6 @@
-push
+plot
 ====
 
 .. currentmodule:: ansys.pynexus
 
-.. automethod:: PyItem.push
+.. autoattribute:: PyItem.plot

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Generate APIs Documentation &#8212; ansys-pynexus 0.1.dev0 documentation</title>
+    <title>API Reference &#8212; ansys-pynexus 0.1.dev0 documentation</title>
     
     
   <!-- Loaded before other Sphinx assets -->
@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="ansys.pynexus.PyNexus" href="_autosummary/ansys.pynexus.PyNexus.html" />
-    <link rel="prev" title="PyAnsys Library Template" href="index.html" />
+    <link rel="prev" title="User Guide" href="userguide/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -86,9 +86,27 @@
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 current active nav-item">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="gettingstarted/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="userguide/index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
  <a class="current reference internal nav-link" href="#">
-  Generate APIs Documentation
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="examples/index.html">
+  Examples
  </a>
 </li>
 
@@ -130,7 +148,7 @@
         <li class="nav-item nav-item-0"><a href="index.html">ansys-pynexus 0.1.dev0 documentation</a> » </li>
     
 
-        <li class="nav-item nav-item-this"><a href="">Generate APIs Documentation</a></li> 
+        <li class="nav-item nav-item-this"><a href="">API Reference</a></li> 
       </ul>
     </div>
         </div>
@@ -204,16 +222,6 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.stop.html">
-   stop
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.visualize_report.html">
-   visualize_report
-  </a>
- </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.html">
    ansys.pynexus.PyItem
@@ -225,13 +233,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.push.html">
-     push
+    <a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.visualize.html">
+     visualize
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.visualize.html">
-     visualize
+    <a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.title.html">
+     title
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.plot.html">
+     plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.xaxis.html">
+     xaxis
     </a>
    </li>
   </ul>
@@ -286,8 +304,8 @@
               
               <div>
                 
-  <section id="generate-apis-documentation">
-<h1>Generate APIs Documentation<a class="headerlink" href="#generate-apis-documentation" title="Permalink to this headline">#</a></h1>
+  <section id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">#</a></h1>
 <section id="autosummary-directive">
 <h2>Autosummary Directive<a class="headerlink" href="#autosummary-directive" title="Permalink to this headline">#</a></h2>
 <p>We use a custom class template (included in <code class="docutils literal notranslate"><span class="pre">_template</span></code> to
@@ -301,18 +319,11 @@ automatically generate class and method documentation.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.html#ansys.pynexus.PyNexus" title="ansys.pynexus.PyNexus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.pynexus.PyNexus</span></code></a>([ansys_installation])</p></td>
 <td><p>Class to create a connection to a running Nexus server.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.stop.html#ansys.pynexus.PyNexus.stop" title="ansys.pynexus.PyNexus.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.pynexus.PyNexus.stop</span></code></a>()</p></td>
-<td><p>Stop the Nexus server connected to this PyNexus session.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.visualize_report.html#ansys.pynexus.PyNexus.visualize_report" title="ansys.pynexus.PyNexus.visualize_report"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.pynexus.PyNexus.visualize_report</span></code></a>([...])</p></td>
-<td><p>Render the report.</p></td>
-</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.html#ansys.pynexus.PyItem" title="ansys.pynexus.PyItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.pynexus.PyItem</span></code></a>([nexus, obj_name, source])</p></td>
 <td><p>Class to create an object that represents a Nexus item.</p></td>
 </tr>
 </tbody>
 </table>
-<p>Note how each method or attribute has its own page.</p>
 </section>
 </section>
 

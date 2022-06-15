@@ -39,7 +39,7 @@
     <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="push" href="ansys.pynexus.PyItem.push.html" />
+    <link rel="next" title="visualize" href="ansys.pynexus.PyItem.visualize.html" />
     <link rel="prev" title="visualize_report" href="ansys.pynexus.PyNexus.visualize_report.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -86,9 +86,27 @@
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 current active nav-item">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../gettingstarted/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../userguide/index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../class_documentation.html">
-  Generate APIs Documentation
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/index.html">
+  Examples
  </a>
 </li>
 
@@ -130,7 +148,7 @@
         <li class="nav-item nav-item-0"><a href="../index.html">ansys-pynexus 0.1.dev0 documentation</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="../class_documentation.html" accesskey="U">Generate APIs Documentation</a> » </li>
+          <li class="nav-item nav-item-1"><a href="../class_documentation.html" accesskey="U">API Reference</a> » </li>
         <li class="nav-item nav-item-this"><a href="">ansys.pynexus.PyItem</a></li> 
       </ul>
     </div>
@@ -158,16 +176,6 @@
    ansys.pynexus.PyNexus
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ansys.pynexus.PyNexus.stop.html">
-   stop
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ansys.pynexus.PyNexus.visualize_report.html">
-   visualize_report
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    ansys.pynexus.PyItem
@@ -179,13 +187,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ansys.pynexus.PyItem.push.html">
-     push
+    <a class="reference internal" href="ansys.pynexus.PyItem.visualize.html">
+     visualize
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ansys.pynexus.PyItem.visualize.html">
-     visualize
+    <a class="reference internal" href="ansys.pynexus.PyItem.title.html">
+     title
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ansys.pynexus.PyItem.plot.html">
+     plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ansys.pynexus.PyItem.xaxis.html">
+     xaxis
     </a>
    </li>
   </ul>
@@ -240,6 +258,11 @@
 declaration.</p>
 <p>Properties created with the <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> decorator should be
 documented in the property’s getter method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>item_text</strong> – Text string in PyItem text</p>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <p>Initialize the class inside a PyNexus instance and set the object to be
 a text item.</p>
@@ -257,11 +280,26 @@ a text item.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.push.html#ansys.pynexus.PyItem.push" title="ansys.pynexus.PyItem.push"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.push</span></code></a>(value)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.visualize.html#ansys.pynexus.PyItem.visualize" title="ansys.pynexus.PyItem.visualize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.visualize</span></code></a>([new_tab])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.visualize.html#ansys.pynexus.PyItem.visualize" title="ansys.pynexus.PyItem.visualize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.visualize</span></code></a>([new_tab])</p></td>
 <td><p>Render this item only</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.title.html#ansys.pynexus.PyItem.title" title="ansys.pynexus.PyItem.title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.title</span></code></a></p></td>
+<td><p>Doc for title</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.plot.html#ansys.pynexus.PyItem.plot" title="ansys.pynexus.PyItem.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.plot</span></code></a></p></td>
+<td><p>Type of rendering for PyItem tables</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.xaxis.html#ansys.pynexus.PyItem.xaxis" title="ansys.pynexus.PyItem.xaxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.xaxis</span></code></a></p></td>
+<td><p>Xaxis for PyItem tables, to be used in plot rendering</p></td>
 </tr>
 </tbody>
 </table>

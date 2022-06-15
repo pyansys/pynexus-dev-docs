@@ -15,14 +15,26 @@
    
       
       
-      PyItem.push
-      
-      
       PyItem.visualize
       
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      
+      PyItem.title
+      
+      
+      PyItem.plot
+      
+      
+      PyItem.xaxis
+      
    
    
