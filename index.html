@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>PyAnsys Library Template &#8212; ansys-pynexus 0.1.dev0 documentation</title>
+    <title>PyNexus &#8212; ansys-pynexus 0.1.dev0 documentation</title>
     
     
   <!-- Loaded before other Sphinx assets -->
@@ -145,7 +145,7 @@
     
     
 
-        <li class="nav-item nav-item-this"><a href="">PyAnsys Library Template</a></li> 
+        <li class="nav-item nav-item-this"><a href="">PyNexus</a></li> 
       </ul>
     </div>
         </div>
@@ -190,8 +190,8 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-overview">
-   Project Overview
+  <a class="reference internal nav-link" href="#overview">
+   Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -200,8 +200,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#documentation">
-   Documentation
+  <a class="reference internal nav-link" href="#development">
+   Development
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -210,8 +210,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#testing">
-   Testing
+  <a class="reference internal nav-link" href="#dependencies">
+   Dependencies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation-and-issues">
+   Documentation and Issues
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -252,67 +257,104 @@
               
               <div>
                 
-  <section id="pyansys-library-template">
-<h1>PyAnsys Library Template<a class="headerlink" href="#pyansys-library-template" title="Permalink to this headline">#</a></h1>
-<p>This repository contains an API to connect to an Ansys Nexus service in an easy and
-pythonic way. The repository can be downloaded from <a class="reference external" href="https://github.com/pyansys/pynexus">this location</a>.</p>
-<section id="project-overview">
-<h2>Project Overview<a class="headerlink" href="#project-overview" title="Permalink to this headline">#</a></h2>
+  <section id="pynexus">
+<h1>PyNexus<a class="headerlink" href="#pynexus" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="https://docs.pyansys.com/"><img alt="pyansys" src="https://img.shields.io/badge/Py-Ansys-ffc107.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABDklEQVQ4jWNgoDfg5mD8vE7q/3bpVyskbW0sMRUwofHD7Dh5OBkZGBgW7/3W2tZpa2tLQEOyOzeEsfumlK2tbVpaGj4N6jIs1lpsDAwMJ278sveMY2BgCA0NFRISwqkhyQ1q/Nyd3zg4OBgYGNjZ2ePi4rB5loGBhZnhxTLJ/9ulv26Q4uVk1NXV/f///////69du4Zdg78lx//t0v+3S88rFISInD59GqIH2esIJ8G9O2/XVwhjzpw5EAam1xkkBJn/bJX+v1365hxxuCAfH9+3b9/+////48cPuNehNsS7cDEzMTAwMMzb+Q2u4dOnT2vWrMHu9ZtzxP9vl/69RVpCkBlZ3N7enoDXBwEAAA+YYitOilMVAAAAAElFTkSuQmCC" /></a> <a class="reference external" href="https://nexusdemo.ensight.com/docs/python/html/Python.html"><img alt="python" src="https://img.shields.io/badge/Python-%3E%3D3.7-blue.svg" /></a> <a class="reference external" href="https://opensource.org/licenses/MIT"><img alt="MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a> <a class="reference external" href="https://github.com/psf/black"><img alt="black" src="https://img.shields.io/badge/code_style-black-000000.svg" /></a> <a class="reference external" href="https://pycqa.github.io/isort/"><img alt="isort" src="https://img.shields.io/badge/imports-isort-%231674b1.svg?style=flat&amp;labelColor=ef8336" /></a> <a class="reference external" href="https://github.com/pre-commit/pre-commit"><img alt="pre-commit" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&amp;logoColor=white" /></a> <a class="reference external" href="https://github.com/pyansys/pynexus/actions?query=branch%3Amain"><img alt="ci" src="https://github.com/pyansys/pynexus/actions/workflows/ci_cd.yml/badge.svg?branch=main" /></a></p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<p>This repository contains the source for PyNexus - the pythonic API to <a class="reference external" href="https://nexusdemo.ensight.com/docs/html/Nexus.html">Nexus</a>, Ansys-EnSight’s report generation tool.</p>
 <p>PyNexus provides an API to connect to an Ansys Nexus service and manipulate its items and reports.
 Ansys Nexus is a service that allows the user to push items of many types (image, text, 3D scenes,
 table, …) into a database, keep them organize and create dynamic reports from them. The pynexus
 module allows the user fully access to all these capabilities in a natural and pythonic way.
 To get more information about Ansys Nexus, please see <a class="reference external" href="https://nexusdemo.ensight.com/docs/html/Nexus.html">the Ansys Nexus documentation page</a>.</p>
+<p><img alt="title" src="https://nexusdemo.ensight.com/static/website/images/nexus_front_page.png" /></p>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p>Include installation directions.  Note that this README will be
 included in your PyPI package, so be sure to include <code class="docutils literal notranslate"><span class="pre">pip</span></code>
 directions along with developer installation directions.  For example.</p>
-<p>Install &lt;PyAnsys Library&gt; with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ansys</span><span class="o">-&lt;</span><span class="n">product</span><span class="o">/</span><span class="n">service</span><span class="o">&gt;-&lt;</span><span class="n">library</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>Alternatively, clone and install in development mode with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyansys</span><span class="o">/</span>
-<span class="n">cd</span> <span class="o">&lt;</span><span class="n">PyAnsys</span><span class="o">-</span><span class="n">Library</span><span class="o">&gt;</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">poetry</span>
-<span class="n">poetry</span> <span class="n">install</span>
-</pre></div>
-</div>
-<p>This creates a new virtual environment, which can be activated with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span> <span class="n">shell</span>
+<p>Install ansys-pynexus with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ansys</span><span class="o">-</span><span class="n">pynexus</span>
 </pre></div>
 </div>
 </section>
-<section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">#</a></h2>
-<p>Include a link to the full sphinx documentation.  For example <a class="reference external" href="https://docs.pyansys.com/">PyAnsys</a></p>
+<section id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">#</a></h2>
+<p>To clone and install in development mode:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyansys</span><span class="o">/</span><span class="n">pynexus</span>
+<span class="n">cd</span> <span class="n">pynexus</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+<span class="n">virtualenv</span> <span class="n">venv</span>  <span class="c1"># create virtual environment</span>
+<span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>  <span class="c1"># (.\venv\Scripts\activate for Windows shell)</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">/</span><span class="n">dev</span><span class="o">.</span><span class="n">txt</span>  <span class="c1"># install dependencies</span>
+</pre></div>
+</div>
+<p>To install pynexus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">clean</span>  <span class="c1"># clean</span>
+<span class="n">make</span> <span class="n">build</span>   <span class="c1"># build</span>
+<span class="n">make</span> <span class="n">install</span>  <span class="c1"># install</span>
+<span class="n">make</span> <span class="n">smoketest</span>  <span class="c1"># test import</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> is a multi-language package manager for pre-commit hooks.</p>
+<p>To install pre-commit into your git hooks, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>pre-commit will now run on every commit. Every time you clone a project using pre-commit, this should always be the first thing you do.</p>
+<p>If you want to manually run all pre-commit hooks on a repository, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">run</span> <span class="o">--</span><span class="n">hook</span><span class="o">-</span><span class="n">stage</span> <span class="n">manual</span> <span class="o">--</span><span class="nb">all</span><span class="o">-</span><span class="n">files</span>
+</pre></div>
+</div>
+<p>This will run a bunch of formatters on your source files.</p>
+<p>To run individual hooks, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">run</span> <span class="o">&lt;</span><span class="n">hook_id</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;hook_id&gt;</span></code> can be obtained from <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code>.
+The first time pre-commit runs on a file, it will automatically download, install, and run the hook.</p>
+<p>To simulate GitHub Actions on your local desktop (recommended), install <a class="reference external" href="https://github.com/nektos/act#readme">act</a>.
+To run a job, for example - <code class="docutils literal notranslate"><span class="pre">docs</span></code> from <code class="docutils literal notranslate"><span class="pre">ci_cd.yml</span></code>, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">act</span> <span class="o">-</span><span class="n">j</span> <span class="n">docs</span>
+</pre></div>
+</div>
+<p>Deploy and upload steps <cite>must always</cite> be ignored. If not, please add <code class="docutils literal notranslate"><span class="pre">if:</span> <span class="pre">${{</span> <span class="pre">!env.ACT</span> <span class="pre">}}</span></code> to the workflow step (and commit if required) before running.</p>
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
-<p>Assume you already have an Ansys Nexus service running, and want to connect to it and add a new
-image item to its database. Then, visualize the report with only the items we just added. These
-few lines will do the trick.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
+<p>The simplest PyNexus session may be started like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.pynexus</span> <span class="kn">import</span> <span class="n">pynexus</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">pynexus</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_img</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_img</span><span class="o">.</span><span class="n">item_image</span> <span class="o">=</span> <span class="s1">&#39;image.png&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">visualize_report</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
-<section id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">#</a></h2>
-<p>You can feel free to include this at the README level or in CONTRIBUTING.md</p>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
+<p>You will need a locally installed and licensed copy of Ansys to run EnSight-Nexus, with the
+first supported version being Ansys 2022 R2.</p>
+</section>
+<section id="documentation-and-issues">
+<h2>Documentation and Issues<a class="headerlink" href="#documentation-and-issues" title="Permalink to this headline">#</a></h2>
+<p>Please see the latest release <a class="reference external" href="https://pynexusdocs.pyansys.com">documentation</a>
+page for more details.</p>
+<p>Please feel free to post issues and other questions at <a class="reference external" href="https://github.com/pyansys/pynexus/issues">PyNexus Issues</a>.  This is the best place
+to post questions and code.</p>
 </section>
 <section id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">#</a></h2>
-<p>Be sure to point out your license (and any acknowledgments).  State
-that the full license can be found in the root directory of the
-repository.</p>
+<p><code class="docutils literal notranslate"><span class="pre">PyNexus</span></code> is licensed under the MIT license.</p>
+<p>This module, <code class="docutils literal notranslate"><span class="pre">ansys-pynexus</span></code> makes no commercial claim over Ansys whatsoever.
+This tool extends the functionality of <code class="docutils literal notranslate"><span class="pre">EnSight-Nexus</span></code> by adding a remote Python interface
+to Nexus without changing the core behavior or license of the original
+software.  The use of Nexus through <code class="docutils literal notranslate"><span class="pre">PyNexus</span></code> requires a
+legally licensed local copy of Ansys.</p>
+<p>To get a copy of Ansys, please visit <a class="reference external" href="https://www.ansys.com/">Ansys</a>.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted/index.html">Getting Started</a><ul>
