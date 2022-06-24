@@ -1,0 +1,6 @@
+item\_text
+==========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.item_text

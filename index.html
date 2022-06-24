@@ -223,18 +223,6 @@
   <a class="reference internal nav-link" href="#license">
    License
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-examples">
-     Code Examples
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rendered-python-code">
-   Rendered Python Code
-  </a>
  </li>
 </ul>
 
@@ -356,62 +344,6 @@ software.  The use of Nexus through <code class="docutils literal notranslate"><
 legally licensed local copy of Ansys.</p>
 <p>To get a copy of Ansys, please visit <a class="reference external" href="https://www.ansys.com/">Ansys</a>.</p>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="gettingstarted/index.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gettingstarted/index.html#getting-go">Getting go</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="userguide/index.html">User Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="userguide/index.html#setting-up">Setting up</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="class_documentation.html">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="class_documentation.html#autosummary-directive">Autosummary Directive</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.html">ansys.pynexus.PyNexus</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.connect.html">connect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.create_item.html">create_item</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.create_report.html">create_report</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.create_slider.html">create_slider</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.get_session.html">get_session</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.start.html">start</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.stop.html">stop</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyNexus.visualize_report.html">visualize_report</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.html">ansys.pynexus.PyItem</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.visualize.html">visualize</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.title.html">title</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.plot.html">plot</a></li>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/ansys.pynexus.PyItem.xaxis.html">xaxis</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples/index.html#pynexus-examples">PyNexus examples</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<section id="code-examples">
-<h3>Code Examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">#</a></h3>
-<p>Here’s a quick preview for how Python code looks using the
-<code class="docutils literal notranslate"><span class="pre">pyansys-pynexus</span></code>.  For more examples, click the links at the
-top of the page to see function, method, and class documentation.</p>
-</section>
-</section>
-<section id="rendered-python-code">
-<h2>Rendered Python Code<a class="headerlink" href="#rendered-python-code" title="Permalink to this headline">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<span class="go">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_img</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_img</span><span class="o">.</span><span class="n">item_image</span> <span class="o">=</span> <span class="s1">&#39;image.png&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">visualize_report</span><span class="p">()</span>
-</pre></div>
 </div>
 </section>
 </section>

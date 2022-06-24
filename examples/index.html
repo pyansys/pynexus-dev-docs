@@ -196,6 +196,11 @@
    PyNexus examples
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connecting-to-a-running-service-and-adding-new-items">
+   Connecting to a running service and adding new items
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -221,7 +226,60 @@
 <h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h1>
 <section id="pynexus-examples">
 <h2>PyNexus examples<a class="headerlink" href="#pynexus-examples" title="Permalink to this headline">#</a></h2>
-<p>Example of usage of the <code class="docutils literal notranslate"><span class="pre">pyansys-pynexus</span></code> module.</p>
+<p>This section contains examples of usage of the <code class="docutils literal notranslate"><span class="pre">ansys-pynexus</span></code> module. More examples
+will follow as the API is expanded.</p>
+</section>
+<section id="connecting-to-a-running-service-and-adding-new-items">
+<h2>Connecting to a running service and adding new items<a class="headerlink" href="#connecting-to-a-running-service-and-adding-new-items" title="Permalink to this headline">#</a></h2>
+<p>Let us assume you have an Ansys Nexus service running on a remote machine. Create a connection
+to it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;htpp://remotemachine:8010&quot;</span><span class="p">,</span> <span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;mypsw&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Now, create a text, and image, and a scene item:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_text</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_text</span><span class="o">.</span><span class="n">item_text</span> <span class="o">=</span> <span class="s2">&quot;&lt;h1&gt;Analysis Title&lt;/h1&gt;This is the first of many items&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_image</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_image</span><span class="o">.</span><span class="n">item_image</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;&#39;&#39;D:\tmp\tmp_img.png&#39;&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_scene</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_scene</span><span class="o">.</span><span class="n">item_scene</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;&#39;&#39;D:\tmp\tmp_scene.avz&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>This will automatically push these items into the Nexus database. Now, visualize them:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">visualize_report</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This will result in the following embedded widget:</p>
+<p><img alt="three_items" src="../_images/three_image.png" /></p>
+<p>Note that if you click on the item corresponding to the
+scene, a 3D viewer will become available, allowing for
+direct interaction with the scene object.</p>
+<p>Now let’s add a plot. Use the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_plot</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_plot</span><span class="o">.</span><span class="n">item_table</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">36</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;|S20&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_plot</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note how this will visualize the information you input in table format:</p>
+<p><img alt="first_table" src="../_images/first_table.png" /></p>
+<p>Let us now change the attributes on this object to make it into a plot:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_plot</span><span class="o">.</span><span class="n">rowlbls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;First Row&#39;</span><span class="p">,</span> <span class="s1">&#39;My Second Row&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_plot</span><span class="o">.</span><span class="n">plot</span> <span class="o">=</span> <span class="s1">&#39;line&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_plot</span><span class="o">.</span><span class="n">xaxis</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_plot</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Plot Y vx X&#39;</span>
+</pre></div>
+</div>
+<p>This will set the rendering attributes. We can not choose to visualize all the items together,
+including the new plot, by simply repeating</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">visualize_report</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>which will result in:</p>
+<p><img alt="all_items" src="../_images/all_items.png" /></p>
 </section>
 </section>
 

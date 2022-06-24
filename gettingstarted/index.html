@@ -193,8 +193,18 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#getting-go">
-   Getting go
+  <a class="reference internal nav-link" href="#id1">
+   Getting started
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   Installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#launching-or-connecting-to-a-nexus-service">
+   Launching or connecting to a Nexus service
   </a>
  </li>
 </ul>
@@ -220,11 +230,71 @@
                 
   <section id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h1>
-<section id="getting-go">
-<h2>Getting go<a class="headerlink" href="#getting-go" title="Permalink to this headline">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">pyansys-pynexus</span></code> module allows the user to
-access the Ansys Nexus capabilities, such as organizing
-data items into a database and creating automated reports.</p>
+<section id="id1">
+<h2>Getting started<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>To run PyNexus, you must have a local copy of Ansys Nexus. PyNexus supports Ansys
+Nexus versions 2022 R2 or newer.</p>
+<p>Visit <a class="reference external" href="https://www.ansys.com/">Ansys</a> for more information on getting a copy of Ansys Nexus.</p>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
+<p>The ansys-pynexus package currently supports Python 3.7 through Python 3.10 on Windows and Linux.</p>
+<p>Install the latest from PyNexus GitHub via:</p>
+<p>pip install git+https://github.com/pyansys/pynexus.git
+For a local “development” version, install with:</p>
+<p>git clone <a class="reference external" href="https://github.com/pyansys/pynexus.git">https://github.com/pyansys/pynexus.git</a>
+cd pynexus
+pip install -e .</p>
+<p>[ rewrite this section once we have an official pip install module]</p>
+</section>
+<section id="launching-or-connecting-to-a-nexus-service">
+<h2>Launching or connecting to a Nexus service<a class="headerlink" href="#launching-or-connecting-to-a-nexus-service" title="Permalink to this headline">#</a></h2>
+<p>Once pynexus is available to the user, the first step will be to connect to a running Nexus
+service or start a new one, if there is none available.</p>
+<p>To connect to a running service, then execute the following lines:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This assumes that there is a Nexus installation on the machine you are running, and that this is
+in the default location. If this is not correct, pass an argument to point to the correct
+installation directory:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">(</span><span class="n">ansys_installation</span><span class="o">=</span><span class="s1">&#39;/my/local/installation&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>If the Nexus service does not use the default values for port and log in credentials, the user</dt><dd><p>will need to input them in the connect method:</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;my_machine:8010&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;MyUsername&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;MyPassword&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Please note that in order to have the items and reports accessible via pynexus in an embeddable way</dt><dd><p>(aka, having these items as widgets inside Jupyter Notebook or similar apps), the Nexus service
+must have been launched with iFrames enabled. This is achieved by explicitly allowing
+this option when starting the Nexus service, for example via setting the flag</p>
+</dd>
+</dl>
+<p>–allow_iframe_embedding yes</p>
+<p>For more information, see the details of the Nexus launcher at <a class="reference external" href="https://nexusdemo.ensight.com/docs/is/html/Nexus.html">iframe</a></p>
+<dl class="simple">
+<dt>Let’s now assume instead that you do not have a running Nexus service accessible to you, and</dt><dd><p>need to start a new one. This can easily be done via the pynexus module:</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">session_id</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Your nexus object now is connected to the newly started Nexus service.</p>
 </section>
 </section>
 

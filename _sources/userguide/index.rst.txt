@@ -1,6 +1,81 @@
 User Guide
 ##########
 
-Setting up
+User Guide
 ~~~~~~~~~~
-How to set up and use the ``pyansys-pynexus``.
+This guide provides information regarding using Ansys
+PyNexus and its constituent modules and components.
+
+PyNexus basic overview
+~~~~~~~~~~~~~~~~~~~~~~
+The current pynexus module allows the user to connect to a running Nexus service, create
+items that will automatically be pushed into the Nexus database and visualize them either
+individually or as part of a report that collects all the items in the current session.
+
+The types of items that can currently be created and pushed into a Nexus service via pynexus
+ are:
+    - Images
+    - Scenes
+    - Tables
+    - Text (HTML and Latex formatting supported)
+
+Let us, for example, connect to a running Nexus service and push on a new session an image item.
+ This can be achieved with the following lines:
+
+.. code:: python
+
+   >>> import pyansys.pynexus as n
+   >>> nexus = n.PyNexus()
+   >>> nexus.connect()
+   True
+   >>> first_image = nexus.create_item()
+   >>> first_image.item_image = 'location\image\file.png'
+   >>> first_image.visualize()
+
+A rendering of the image object will be embedded in the current interpreter. The same steps can
+ be followed to create and visualize other item types.
+
+Note that if the user wants to update the image, all they need to do is redefined the item_image
+attribute. The Nexus database will automatically update.
+
+Visualizing a Nexus item
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are two main routes to visualize an item after you have created it as a PyItem via the
+pynexus module. The first is to visualize it as a stand alone item, as described in the above
+section. The second is to visualize it together with all the other items that are currently
+present in the current Nexus session.
+
+Each time the user connects to a Nexus service via the PyNexus methods (either the connect or the
+start module), they will be connected to a specific session. Each session can be identified by
+a unique GUID. On the PyNexus object you can execute the visualize_report call to visualize all
+the items that are currently present in the session. So executing the following code:
+
+.. code:: python
+
+   >>> import pyansys.pynexus as n
+   >>> nexus = n.PyNexus()
+   >>> nexus.connect()
+   True
+   >>> first_image = nexus.create_item()
+   >>> first_image.item_image = 'location\image\file.png'
+   >>> first_text = nexus.create_item()
+   >>> first_text.item_text = "<h1>My Title</h1>This is the first example"
+   >>> nexus.visualize_report()
+
+will result in an widget embedded in the application you are running from that shows both items
+(image and text) that have been created.
+
+If the user wants to connect to a specific session and visualize the items from that, simply
+use the session attribute in the connect call:
+
+.. code:: python
+
+   >>> import pyansys.pynexus as n
+   >>> nexus = n.PyNexus()
+   >>> nexus.connect(session='a8098c1a-f86e-11da-bd1a-00112444be1e')
+   True
+   >>> nexus.visualize_report()
+
+This will result in a widget with all the items that exist on session with GUID
+'a8098c1a-f86e-11da-bd1a-00112444be1e'.

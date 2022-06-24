@@ -1,0 +1,6 @@
+item\_image
+===========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.item_image

@@ -1,0 +1,6 @@
+item\_table
+===========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.item_table

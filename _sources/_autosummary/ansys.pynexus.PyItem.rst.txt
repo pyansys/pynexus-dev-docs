@@ -28,6 +28,24 @@
       :toctree:
    
       
+      PyItem.item_text
+      
+      
+      PyItem.item_image
+      
+      
+      PyItem.item_scene
+      
+      
+      PyItem.item_table
+      
+      
+      PyItem.rowlbls
+      
+      
+      PyItem.collbls
+      
+      
       PyItem.title
       
       

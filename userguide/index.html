@@ -193,8 +193,18 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up">
-   Setting up
+  <a class="reference internal nav-link" href="#id1">
+   User Guide
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pynexus-basic-overview">
+   PyNexus basic overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-a-nexus-item">
+   Visualizing a Nexus item
   </a>
  </li>
 </ul>
@@ -220,9 +230,80 @@
                 
   <section id="user-guide">
 <h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">#</a></h1>
-<section id="setting-up">
-<h2>Setting up<a class="headerlink" href="#setting-up" title="Permalink to this headline">#</a></h2>
-<p>How to set up and use the <code class="docutils literal notranslate"><span class="pre">pyansys-pynexus</span></code>.</p>
+<section id="id1">
+<h2>User Guide<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>This guide provides information regarding using Ansys
+PyNexus and its constituent modules and components.</p>
+</section>
+<section id="pynexus-basic-overview">
+<h2>PyNexus basic overview<a class="headerlink" href="#pynexus-basic-overview" title="Permalink to this headline">#</a></h2>
+<p>The current pynexus module allows the user to connect to a running Nexus service, create
+items that will automatically be pushed into the Nexus database and visualize them either
+individually or as part of a report that collects all the items in the current session.</p>
+<dl class="simple">
+<dt>The types of items that can currently be created and pushed into a Nexus service via pynexus</dt><dd><dl class="simple">
+<dt>are:</dt><dd><ul class="simple">
+<li><p>Images</p></li>
+<li><p>Scenes</p></li>
+<li><p>Tables</p></li>
+<li><p>Text (HTML and Latex formatting supported)</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>Let us, for example, connect to a running Nexus service and push on a new session an image item.</dt><dd><p>This can be achieved with the following lines:</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_image</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_image</span><span class="o">.</span><span class="n">item_image</span> <span class="o">=</span> <span class="s1">&#39;location\image</span><span class="se">\f</span><span class="s1">ile.png&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_image</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>A rendering of the image object will be embedded in the current interpreter. The same steps can</dt><dd><p>be followed to create and visualize other item types.</p>
+</dd>
+</dl>
+<p>Note that if the user wants to update the image, all they need to do is redefined the item_image
+attribute. The Nexus database will automatically update.</p>
+</section>
+<section id="visualizing-a-nexus-item">
+<h2>Visualizing a Nexus item<a class="headerlink" href="#visualizing-a-nexus-item" title="Permalink to this headline">#</a></h2>
+<p>There are two main routes to visualize an item after you have created it as a PyItem via the
+pynexus module. The first is to visualize it as a stand alone item, as described in the above
+section. The second is to visualize it together with all the other items that are currently
+present in the current Nexus session.</p>
+<p>Each time the user connects to a Nexus service via the PyNexus methods (either the connect or the
+start module), they will be connected to a specific session. Each session can be identified by
+a unique GUID. On the PyNexus object you can execute the visualize_report call to visualize all
+the items that are currently present in the session. So executing the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_image</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_image</span><span class="o">.</span><span class="n">item_image</span> <span class="o">=</span> <span class="s1">&#39;location\image</span><span class="se">\f</span><span class="s1">ile.png&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_text</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_text</span><span class="o">.</span><span class="n">item_text</span> <span class="o">=</span> <span class="s2">&quot;&lt;h1&gt;My Title&lt;/h1&gt;This is the first example&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">visualize_report</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>will result in an widget embedded in the application you are running from that shows both items
+(image and text) that have been created.</p>
+<p>If the user wants to connect to a specific session and visualize the items from that, simply
+use the session attribute in the connect call:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyansys.pynexus</span> <span class="k">as</span> <span class="nn">n</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="s1">&#39;a8098c1a-f86e-11da-bd1a-00112444be1e&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">visualize_report</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This will result in a widget with all the items that exist on session with GUID
+‘a8098c1a-f86e-11da-bd1a-00112444be1e’.</p>
 </section>
 </section>
 

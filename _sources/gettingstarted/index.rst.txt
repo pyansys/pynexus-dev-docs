@@ -1,9 +1,86 @@
 Getting Started
 ###############
 
-Getting go
-~~~~~~~~~~
-The ``pyansys-pynexus`` module allows the user to
-access the Ansys Nexus capabilities, such as organizing
-data items into a database and creating automated reports.
+Getting started
+~~~~~~~~~~~~~~~
 
+To run PyNexus, you must have a local copy of Ansys Nexus. PyNexus supports Ansys
+Nexus versions 2022 R2 or newer.
+
+Visit `Ansys`_ for more information on getting a copy of Ansys Nexus.
+
+.. _Ansys: https://www.ansys.com/
+
+Installation
+~~~~~~~~~~~~
+
+The ansys-pynexus package currently supports Python 3.7 through Python 3.10 on Windows and Linux.
+
+Install the latest from PyNexus GitHub via:
+
+pip install git+https://github.com/pyansys/pynexus.git
+For a local “development” version, install with:
+
+git clone https://github.com/pyansys/pynexus.git
+cd pynexus
+pip install -e .
+
+[ rewrite this section once we have an official pip install module]
+
+Launching or connecting to a Nexus service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once pynexus is available to the user, the first step will be to connect to a running Nexus
+service or start a new one, if there is none available.
+
+To connect to a running service, then execute the following lines:
+
+.. code:: python
+
+   >>> import ansys.pynexus as n
+   >>> nexus = n.PyNexus()
+   >>> nexus.connect()
+   True
+
+This assumes that there is a Nexus installation on the machine you are running, and that this is
+in the default location. If this is not correct, pass an argument to point to the correct
+installation directory:
+
+.. code:: python
+
+   >>> import ansys.pynexus as n
+   >>> nexus = n.PyNexus(ansys_installation='/my/local/installation')
+   >>> nexus.connect()
+   True
+
+If the Nexus service does not use the default values for port and log in credentials, the user
+ will need to input them in the connect method:
+
+.. code:: python
+
+   >>> import ansys.pynexus as n
+   >>> nexus = n.PyNexus()
+   >>> nexus.connect(url='my_machine:8010', username='MyUsername', password='MyPassword')
+   True
+
+Please note that in order to have the items and reports accessible via pynexus in an embeddable way
+ (aka, having these items as widgets inside Jupyter Notebook or similar apps), the Nexus service
+ must have been launched with iFrames enabled. This is achieved by explicitly allowing
+ this option when starting the Nexus service, for example via setting the flag
+
+--allow_iframe_embedding yes
+
+For more information, see the details of the Nexus launcher at `iframe`_
+
+.. _iframe: https://nexusdemo.ensight.com/docs/is/html/Nexus.html
+
+Let's now assume instead that you do not have a running Nexus service accessible to you, and
+ need to start a new one. This can easily be done via the pynexus module:
+
+.. code:: python
+
+   >>> import ansys.pynexus as n
+   >>> nexus = n.PyNexus()
+   >>> session_id = nexus.start()
+
+Your nexus object now is connected to the newly started Nexus service.

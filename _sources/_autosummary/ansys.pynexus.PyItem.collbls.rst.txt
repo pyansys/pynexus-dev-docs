@@ -1,0 +1,6 @@
+collbls
+=======
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.collbls

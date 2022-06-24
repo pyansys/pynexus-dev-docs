@@ -1,0 +1,6 @@
+item\_scene
+===========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.item_scene

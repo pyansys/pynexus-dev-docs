@@ -192,6 +192,36 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="ansys.pynexus.PyItem.item_text.html">
+     item_text
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ansys.pynexus.PyItem.item_image.html">
+     item_image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ansys.pynexus.PyItem.item_scene.html">
+     item_scene
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ansys.pynexus.PyItem.item_table.html">
+     item_table
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ansys.pynexus.PyItem.rowlbls.html">
+     rowlbls
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ansys.pynexus.PyItem.collbls.html">
+     collbls
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="ansys.pynexus.PyItem.title.html">
      title
     </a>
@@ -254,13 +284,30 @@
 <dt class="sig sig-object py" id="ansys.pynexus.PyItem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.pynexus.</span></span><span class="sig-name descname"><span class="pre">PyItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nexus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PyNexus'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.pynexus.PyItem" title="Permalink to this definition">#</a></dt>
 <dd><p>Class to create an object that represents a Nexus item.</p>
-<p>Attributes should be documented inline with the attribute’s
-declaration.</p>
-<p>Properties created with the <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> decorator should be
-documented in the property’s getter method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><strong>item_text</strong> – Text string in PyItem text</p>
+<p>Create an instance of this class for each item in the Nexus database you want to
+interact with. When the object is created, no type is set. This will be determined the
+first time you set the item_* attribute, and can not be changed. So for example if you
+create an instance with:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_txt</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">create_item</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_txt</span><span class="o">.</span><span class="n">item_text</span> <span class="o">=</span> <span class="s1">&#39;&lt;h1&gt;The test&lt;/h1&gt;This is a text Nexus item&#39;</span>
+</pre></div>
+</div>
+<p>the object my_txt is now a text item, and the type can not be changed at a later time. You
+can reset the attributes describing the object at any time and the change will automatically
+be propagated into the Nexus database. You can control the rendering of these objects via
+the attributes described below. Note that these attributes mirror the generic Nexus
+data item attributes, as described <a class="reference external" href="https://nexusdemo.ensight.com/docs/html/Nexus.html?DataItems.html">here</a></p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>nexus</strong><span class="classifier"><a class="reference internal" href="ansys.pynexus.PyNexus.html#ansys.pynexus.PyNexus" title="ansys.pynexus.PyNexus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ansys.pynexus.PyNexus</span></code></a></span></dt><dd><p>PyNexus object that provides the connection to the database the PyItem will interact with.
+Default: None</p>
+</dd>
+<dt><strong>obj_name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the item in the Nexus database. Default: ‘default’</p>
+</dd>
+<dt><strong>source</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the source for the item in the Nexus database. Default: ‘PyNexus’</p>
+</dd>
+</dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
@@ -292,11 +339,29 @@ a text item.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.item_text.html#ansys.pynexus.PyItem.item_text" title="ansys.pynexus.PyItem.item_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.item_text</span></code></a></p></td>
+<td><p>Set the text.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.item_image.html#ansys.pynexus.PyItem.item_image" title="ansys.pynexus.PyItem.item_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.item_image</span></code></a></p></td>
+<td><p>Set the image object - file or png binary</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.item_scene.html#ansys.pynexus.PyItem.item_scene" title="ansys.pynexus.PyItem.item_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.item_scene</span></code></a></p></td>
+<td><p>Set the 3D scene file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.item_table.html#ansys.pynexus.PyItem.item_table" title="ansys.pynexus.PyItem.item_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.item_table</span></code></a></p></td>
+<td><p>Set the table values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.rowlbls.html#ansys.pynexus.PyItem.rowlbls" title="ansys.pynexus.PyItem.rowlbls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.rowlbls</span></code></a></p></td>
+<td><p>Set the labels for the rows of item_table.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.collbls.html#ansys.pynexus.PyItem.collbls" title="ansys.pynexus.PyItem.collbls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.collbls</span></code></a></p></td>
+<td><p>Set the labels for the columns of item_table.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.title.html#ansys.pynexus.PyItem.title" title="ansys.pynexus.PyItem.title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.title</span></code></a></p></td>
-<td><p>Doc for title</p></td>
+<td><p>Set the title for the table item</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.plot.html#ansys.pynexus.PyItem.plot" title="ansys.pynexus.PyItem.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.plot</span></code></a></p></td>
-<td><p>Type of rendering for PyItem tables</p></td>
+<td><p>Type of rendering for PyItem tables.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.pynexus.PyItem.xaxis.html#ansys.pynexus.PyItem.xaxis" title="ansys.pynexus.PyItem.xaxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyItem.xaxis</span></code></a></p></td>
 <td><p>Xaxis for PyItem tables, to be used in plot rendering</p></td>

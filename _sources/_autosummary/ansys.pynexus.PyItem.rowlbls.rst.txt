@@ -1,0 +1,6 @@
+rowlbls
+=======
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.rowlbls
