@@ -1,0 +1,6 @@
+query
+=====
+
+.. currentmodule:: ansys.pynexus
+
+.. automethod:: PyNexus.query

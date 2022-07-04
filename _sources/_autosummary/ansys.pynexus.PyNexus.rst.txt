@@ -30,6 +30,9 @@
       PyNexus.get_session
       
       
+      PyNexus.query
+      
+      
       PyNexus.start
       
       

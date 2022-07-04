@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>get_session &#8212; ansys-pynexus 0.1.dev0 documentation</title>
+    <title>query &#8212; ansys-pynexus 0.1.dev0 documentation</title>
     
     
   <!-- Loaded before other Sphinx assets -->
@@ -39,8 +39,8 @@
     <script src="../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="query" href="ansys.pynexus.PyNexus.query.html" />
-    <link rel="prev" title="create_slider" href="ansys.pynexus.PyNexus.create_slider.html" />
+    <link rel="next" title="start" href="ansys.pynexus.PyNexus.start.html" />
+    <link rel="prev" title="get_session" href="ansys.pynexus.PyNexus.get_session.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -150,7 +150,7 @@
 
           <li class="nav-item nav-item-1"><a href="../class_documentation.html" >API Reference</a> » </li>
           <li class="nav-item nav-item-2"><a href="ansys.pynexus.PyNexus.html" accesskey="U">ansys.pynexus.PyNexus</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">get_session</a></li> 
+        <li class="nav-item nav-item-this"><a href="">query</a></li> 
       </ul>
     </div>
         </div>
@@ -202,13 +202,13 @@
      create_slider
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ansys.pynexus.PyNexus.get_session.html">
      get_session
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.pynexus.PyNexus.query.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      query
     </a>
    </li>
@@ -274,31 +274,34 @@
               
               <div>
                 
-  <section id="get-session">
-<h1>get_session<a class="headerlink" href="#get-session" title="Permalink to this headline">#</a></h1>
+  <section id="query">
+<h1>query<a class="headerlink" href="#query" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
-<dt class="sig sig-object py" id="ansys.pynexus.PyNexus.get_session">
-<span class="sig-prename descclassname"><span class="pre">PyNexus.</span></span><span class="sig-name descname"><span class="pre">get_session</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.pynexus.PyNexus.get_session" title="Permalink to this definition">#</a></dt>
-<dd><p>Get the GUID of the session currently being worked on.</p>
-<dl class="field-list simple">
+<dt class="sig sig-object py" id="ansys.pynexus.PyNexus.query">
+<span class="sig-prename descclassname"><span class="pre">PyNexus.</span></span><span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PyItem'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.pynexus.PyNexus.query" title="Permalink to this definition">#</a></dt>
+<dd><p>Query the database.</p>
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>None</strong></dt><dd></dd>
+<dd class="field-odd"><dl>
+<dt><strong>query_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Type of objects to query. Options: PyItem, Session, Dataset. Default: PyItem</p>
+</dd>
+<dt><strong>filter</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Query filter. Syntax corresponds to the Nexus syntax, which can be found at <a class="reference external" href="https://nexusdemo.ensight.com/docs/html/Nexus.html?QueryExpressions.html">this</a>
+link. Default: Empty, aka no filter</p>
+</dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>GUID of the session</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p>List of queried objects</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.pynexus</span> <span class="kn">import</span> <span class="n">pynexus</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">pynexus</span><span class="o">.</span><span class="n">PyNexus</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;htpp://localhost:8010&quot;</span><span class="p">,</span> <span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;mypsw&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">get_session</span><span class="p">()</span>
-<span class="go">&#39;a8098c1a-f86e-11da-bd1a-00112444be1e&#39;</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.pynexus</span> <span class="kn">import</span> <span class="n">PyNexus</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span> <span class="o">=</span> <span class="n">PyNexus</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nexus</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">imgs</span> <span class="o">=</span> <span class="n">nexus</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;PyItem&#39;</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="s1">&#39;A|i_type|cont|image;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
