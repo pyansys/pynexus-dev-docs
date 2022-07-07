@@ -247,7 +247,7 @@
                 
   <section id="pynexus">
 <h1>PyNexus<a class="headerlink" href="#pynexus" title="Permalink to this headline">#</a></h1>
-<p><a class="reference external" href="https://docs.pyansys.com/"><img alt="pyansys" src="https://img.shields.io/badge/Py-Ansys-ffc107.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABDklEQVQ4jWNgoDfg5mD8vE7q/3bpVyskbW0sMRUwofHD7Dh5OBkZGBgW7/3W2tZpa2tLQEOyOzeEsfumlK2tbVpaGj4N6jIs1lpsDAwMJ278sveMY2BgCA0NFRISwqkhyQ1q/Nyd3zg4OBgYGNjZ2ePi4rB5loGBhZnhxTLJ/9ulv26Q4uVk1NXV/f///////69du4Zdg78lx//t0v+3S88rFISInD59GqIH2esIJ8G9O2/XVwhjzpw5EAam1xkkBJn/bJX+v1365hxxuCAfH9+3b9/+////48cPuNehNsS7cDEzMTAwMMzb+Q2u4dOnT2vWrMHu9ZtzxP9vl/69RVpCkBlZ3N7enoDXBwEAAA+YYitOilMVAAAAAElFTkSuQmCC" /></a> <a class="reference external" href="https://nexusdemo.ensight.com/docs/python/html/Python.html"><img alt="python" src="https://img.shields.io/badge/Python-%3E%3D3.7-blue.svg" /></a> <a class="reference external" href="https://opensource.org/licenses/MIT"><img alt="MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a> <a class="reference external" href="https://github.com/psf/black"><img alt="black" src="https://img.shields.io/badge/code_style-black-000000.svg" /></a> <a class="reference external" href="https://pycqa.github.io/isort/"><img alt="isort" src="https://img.shields.io/badge/imports-isort-%231674b1.svg?style=flat&amp;labelColor=ef8336" /></a> <a class="reference external" href="https://github.com/pre-commit/pre-commit"><img alt="pre-commit" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&amp;logoColor=white" /></a> <a class="reference external" href="https://github.com/pyansys/pynexus/actions?query=branch%3Amain"><img alt="ci" src="https://github.com/pyansys/pynexus/actions/workflows/ci_cd.yml/badge.svg?branch=main" /></a></p>
+<p><a class="reference external" href="https://docs.pyansys.com/"><img alt="pyansys" src="https://img.shields.io/badge/Py-Ansys-ffc107.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABDklEQVQ4jWNgoDfg5mD8vE7q/3bpVyskbW0sMRUwofHD7Dh5OBkZGBgW7/3W2tZpa2tLQEOyOzeEsfumlK2tbVpaGj4N6jIs1lpsDAwMJ278sveMY2BgCA0NFRISwqkhyQ1q/Nyd3zg4OBgYGNjZ2ePi4rB5loGBhZnhxTLJ/9ulv26Q4uVk1NXV/f///////69du4Zdg78lx//t0v+3S88rFISInD59GqIH2esIJ8G9O2/XVwhjzpw5EAam1xkkBJn/bJX+v1365hxxuCAfH9+3b9/+////48cPuNehNsS7cDEzMTAwMMzb+Q2u4dOnT2vWrMHu9ZtzxP9vl/69RVpCkBlZ3N7enoDXBwEAAA+YYitOilMVAAAAAElFTkSuQmCC" /></a> <a class="reference external" href="https://nexusdemo.ensight.com/docs/python/html/Python.html"><img alt="python" src="https://img.shields.io/badge/Python-%3E%3D3.7-blue.svg" /></a> <a class="reference external" href="https://opensource.org/licenses/MIT"><img alt="MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a> <a class="reference external" href="https://github.com/pre-commit/pre-commit"><img alt="pre-commit" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&amp;logoColor=white" /></a> <a class="reference external" href="https://github.com/psf/black"><img alt="black" src="https://img.shields.io/badge/code_style-black-000000.svg" /></a> <a class="reference external" href="https://pycqa.github.io/isort/"><img alt="isort" src="https://img.shields.io/badge/imports-isort-%231674b1.svg?style=flat&amp;labelColor=ef8336" /></a> <a class="reference external" href="https://github.com/PyCQA/bandit"><img alt="Security Status" src="https://img.shields.io/badge/security-bandit-yellow.svg" /></a> <a class="reference external" href="https://github.com/pyansys/pynexus/actions?query=branch%3Amain"><img alt="ci" src="https://github.com/pyansys/pynexus/actions/workflows/ci_cd.yml/badge.svg?branch=main" /></a></p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <p>This repository contains the source for PyNexus - the pythonic API to <a class="reference external" href="https://nexusdemo.ensight.com/docs/html/Nexus.html">Nexus</a>, Ansys-EnSight’s report generation tool.</p>
@@ -277,15 +277,20 @@ directions along with developer installation directions.  For example.</p>
 <span class="n">virtualenv</span> <span class="n">venv</span>  <span class="c1"># create virtual environment</span>
 <span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>  <span class="c1"># (.\venv\Scripts\activate for Windows shell)</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">/</span><span class="n">dev</span><span class="o">.</span><span class="n">txt</span>  <span class="c1"># install dependencies</span>
+<span class="n">make</span> <span class="n">install</span><span class="o">-</span><span class="n">dev</span>  <span class="c1"># install pynexus in editable mode</span>
 </pre></div>
 </div>
-<p>To install pynexus:</p>
+<p>Now you can start developing pynexus.</p>
+<p>To build and install pynexus:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">clean</span>  <span class="c1"># clean</span>
 <span class="n">make</span> <span class="n">build</span>   <span class="c1"># build</span>
-<span class="n">make</span> <span class="n">install</span>  <span class="c1"># install</span>
+<span class="c1"># this will replace the editable install done previously. If you don&#39;t want to replace,</span>
+<span class="c1"># switch your virtual environments to test the new install separately.</span>
+<span class="n">make</span> <span class="n">install</span>
 <span class="n">make</span> <span class="n">smoketest</span>  <span class="c1"># test import</span>
 </pre></div>
 </div>
+<p>Pre-commit setup:</p>
 <p><code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> is a multi-language package manager for pre-commit hooks.</p>
 <p>To install pre-commit into your git hooks, run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">install</span>
@@ -293,7 +298,7 @@ directions along with developer installation directions.  For example.</p>
 </div>
 <p>pre-commit will now run on every commit. Every time you clone a project using pre-commit, this should always be the first thing you do.</p>
 <p>If you want to manually run all pre-commit hooks on a repository, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">run</span> <span class="o">--</span><span class="n">hook</span><span class="o">-</span><span class="n">stage</span> <span class="n">manual</span> <span class="o">--</span><span class="nb">all</span><span class="o">-</span><span class="n">files</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">run</span> <span class="o">--</span><span class="nb">all</span><span class="o">-</span><span class="n">files</span>
 </pre></div>
 </div>
 <p>This will run a bunch of formatters on your source files.</p>
@@ -303,12 +308,13 @@ directions along with developer installation directions.  For example.</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;hook_id&gt;</span></code> can be obtained from <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code>.
 The first time pre-commit runs on a file, it will automatically download, install, and run the hook.</p>
+<p>Local GitHub actions:</p>
 <p>To simulate GitHub Actions on your local desktop (recommended), install <a class="reference external" href="https://github.com/nektos/act#readme">act</a>.
 To run a job, for example - <code class="docutils literal notranslate"><span class="pre">docs</span></code> from <code class="docutils literal notranslate"><span class="pre">ci_cd.yml</span></code>, use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">act</span> <span class="o">-</span><span class="n">j</span> <span class="n">docs</span>
 </pre></div>
 </div>
-<p>Deploy and upload steps <cite>must always</cite> be ignored. If not, please add <code class="docutils literal notranslate"><span class="pre">if:</span> <span class="pre">${{</span> <span class="pre">!env.ACT</span> <span class="pre">}}</span></code> to the workflow step (and commit if required) before running.</p>
+<p>Deploy and upload steps <strong>must always</strong> be ignored. If not, please add <code class="docutils literal notranslate"><span class="pre">if:</span> <span class="pre">${{</span> <span class="pre">!env.ACT</span> <span class="pre">}}</span></code> to the workflow step (and commit if required) before running.</p>
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
