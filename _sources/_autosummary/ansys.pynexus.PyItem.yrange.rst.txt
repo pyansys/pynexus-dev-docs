@@ -1,0 +1,6 @@
+yrange
+======
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.yrange

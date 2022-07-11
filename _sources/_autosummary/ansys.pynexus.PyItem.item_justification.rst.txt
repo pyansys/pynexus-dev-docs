@@ -1,0 +1,6 @@
+item\_justification
+===================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.item_justification

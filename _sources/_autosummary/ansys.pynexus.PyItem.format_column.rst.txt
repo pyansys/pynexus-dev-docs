@@ -1,0 +1,6 @@
+format\_column
+==============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.format_column

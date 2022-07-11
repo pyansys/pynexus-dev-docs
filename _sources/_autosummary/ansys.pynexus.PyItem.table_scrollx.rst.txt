@@ -1,0 +1,6 @@
+table\_scrollx
+==============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.table_scrollx

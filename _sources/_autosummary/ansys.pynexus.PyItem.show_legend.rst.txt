@@ -1,0 +1,6 @@
+show\_legend
+============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.show_legend

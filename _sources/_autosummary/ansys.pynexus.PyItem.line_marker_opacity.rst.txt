@@ -1,0 +1,6 @@
+line\_marker\_opacity
+=====================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.line_marker_opacity

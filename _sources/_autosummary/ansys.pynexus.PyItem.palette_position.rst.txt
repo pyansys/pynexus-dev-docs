@@ -1,0 +1,6 @@
+palette\_position
+=================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.palette_position

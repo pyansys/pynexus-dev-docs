@@ -1,0 +1,6 @@
+table\_scrolly
+==============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.table_scrolly

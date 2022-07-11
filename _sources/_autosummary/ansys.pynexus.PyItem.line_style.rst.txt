@@ -1,0 +1,6 @@
+line\_style
+===========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.line_style

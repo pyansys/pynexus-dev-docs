@@ -40,19 +40,169 @@
       PyItem.item_table
       
       
-      PyItem.rowlbls
+      PyItem.format
       
       
-      PyItem.collbls
+      PyItem.format_column
       
       
-      PyItem.title
+      PyItem.labels_column
+      
+      
+      PyItem.format_row
+      
+      
+      PyItem.labels_row
       
       
       PyItem.plot
       
       
+      PyItem.title
+      
+      
+      PyItem.line_color
+      
+      
+      PyItem.line_marker
+      
+      
+      PyItem.line_marker_text
+      
+      
+      PyItem.line_marker_size
+      
+      
+      PyItem.line_marker_opacity
+      
+      
+      PyItem.line_marker_scale
+      
+      
+      PyItem.line_error_bars
+      
+      
+      PyItem.line_style
+      
+      
+      PyItem.line_width
+      
+      
+      PyItem.stacked
+      
+      
       PyItem.xaxis
+      
+      
+      PyItem.yaxis
+      
+      
+      PyItem.palette
+      
+      
+      PyItem.palette_position
+      
+      
+      PyItem.palette_range
+      
+      
+      PyItem.palette_show
+      
+      
+      PyItem.palette_title
+      
+      
+      PyItem.width
+      
+      
+      PyItem.height
+      
+      
+      PyItem.show_legend
+      
+      
+      PyItem.legend_position
+      
+      
+      PyItem.show_legend_border
+      
+      
+      PyItem.show_border
+      
+      
+      PyItem.plot_margins
+      
+      
+      PyItem.plot_title
+      
+      
+      PyItem.plot_xaxis_type
+      
+      
+      PyItem.plot_yaxis_type
+      
+      
+      PyItem.xrange
+      
+      
+      PyItem.yrange
+      
+      
+      PyItem.xaxis_format
+      
+      
+      PyItem.yaxis_format
+      
+      
+      PyItem.xtitle
+      
+      
+      PyItem.ytitle
+      
+      
+      PyItem.item_justification
+      
+      
+      PyItem.nan_display
+      
+      
+      PyItem.table_sort
+      
+      
+      PyItem.table_title
+      
+      
+      PyItem.align_column
+      
+      
+      PyItem.table_search
+      
+      
+      PyItem.table_page
+      
+      
+      PyItem.table_pagemenu
+      
+      
+      PyItem.table_scrollx
+      
+      
+      PyItem.table_scrolly
+      
+      
+      PyItem.table_bordered
+      
+      
+      PyItem.table_condensed
+      
+      
+      PyItem.table_wrap_content
+      
+      
+      PyItem.table_default_col_labels
+      
+      
+      PyItem.table_cond_format
       
    
    

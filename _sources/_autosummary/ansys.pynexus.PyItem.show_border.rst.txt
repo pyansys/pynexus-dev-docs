@@ -1,0 +1,6 @@
+show\_border
+============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.show_border

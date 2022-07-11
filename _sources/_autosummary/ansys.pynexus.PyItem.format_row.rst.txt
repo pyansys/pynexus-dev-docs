@@ -1,0 +1,6 @@
+format\_row
+===========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.format_row

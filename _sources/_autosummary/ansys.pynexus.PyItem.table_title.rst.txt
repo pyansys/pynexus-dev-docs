@@ -1,0 +1,6 @@
+table\_title
+============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.table_title

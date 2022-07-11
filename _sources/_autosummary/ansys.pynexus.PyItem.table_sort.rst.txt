@@ -1,0 +1,6 @@
+table\_sort
+===========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.table_sort

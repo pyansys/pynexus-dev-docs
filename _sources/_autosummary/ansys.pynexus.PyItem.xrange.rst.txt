@@ -1,0 +1,6 @@
+xrange
+======
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.xrange

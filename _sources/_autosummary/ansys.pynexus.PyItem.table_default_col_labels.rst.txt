@@ -1,0 +1,6 @@
+table\_default\_col\_labels
+===========================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.table_default_col_labels

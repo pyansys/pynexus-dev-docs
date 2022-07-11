@@ -1,0 +1,6 @@
+ytitle
+======
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.ytitle

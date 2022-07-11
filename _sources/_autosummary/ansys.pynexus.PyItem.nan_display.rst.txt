@@ -1,0 +1,6 @@
+nan\_display
+============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.nan_display

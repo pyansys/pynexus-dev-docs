@@ -1,6 +1,6 @@
-rowlbls
+stacked
 =======
 
 .. currentmodule:: ansys.pynexus
 
-.. autoattribute:: PyItem.rowlbls
+.. autoattribute:: PyItem.stacked

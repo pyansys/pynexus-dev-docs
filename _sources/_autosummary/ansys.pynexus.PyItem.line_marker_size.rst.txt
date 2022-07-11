@@ -1,0 +1,6 @@
+line\_marker\_size
+==================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.line_marker_size

@@ -1,0 +1,6 @@
+xaxis\_format
+=============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.xaxis_format

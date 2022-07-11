@@ -1,0 +1,6 @@
+palette\_show
+=============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.palette_show

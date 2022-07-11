@@ -1,0 +1,6 @@
+align\_column
+=============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.align_column

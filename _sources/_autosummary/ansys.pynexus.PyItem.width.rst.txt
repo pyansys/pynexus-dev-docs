@@ -1,0 +1,6 @@
+width
+=====
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.width

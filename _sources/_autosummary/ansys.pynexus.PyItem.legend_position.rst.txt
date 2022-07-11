@@ -1,0 +1,6 @@
+legend\_position
+================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.legend_position

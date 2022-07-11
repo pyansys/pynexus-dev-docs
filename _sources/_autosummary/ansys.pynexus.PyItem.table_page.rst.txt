@@ -1,0 +1,6 @@
+table\_page
+===========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.table_page

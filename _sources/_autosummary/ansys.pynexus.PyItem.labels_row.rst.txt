@@ -1,0 +1,6 @@
+labels\_row
+===========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.labels_row

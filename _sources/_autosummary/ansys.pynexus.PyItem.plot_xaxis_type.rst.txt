@@ -1,0 +1,6 @@
+plot\_xaxis\_type
+=================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.plot_xaxis_type

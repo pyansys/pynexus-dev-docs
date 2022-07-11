@@ -1,0 +1,6 @@
+table\_pagemenu
+===============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.table_pagemenu

@@ -1,0 +1,6 @@
+table\_cond\_format
+===================
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.table_cond_format

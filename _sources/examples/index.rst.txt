@@ -65,7 +65,7 @@ Let us now change the attributes on this object to make it into a plot:
 
 .. code:: python
 
-   >>> my_plot.rowlbls = ['First Row', 'My Second Row']
+   >>> my_plot.labels_row = ['First Row', 'My Second Row']
    >>> my_plot.plot = 'line'
    >>> my_plot.xaxis = 0
    >>> my_plot.title = 'Plot Y vx X'

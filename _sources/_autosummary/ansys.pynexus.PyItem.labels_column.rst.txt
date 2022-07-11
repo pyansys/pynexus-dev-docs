@@ -1,0 +1,6 @@
+labels\_column
+==============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.labels_column

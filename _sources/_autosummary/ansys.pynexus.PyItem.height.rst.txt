@@ -1,0 +1,6 @@
+height
+======
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.height

@@ -1,6 +1,6 @@
-collbls
+palette
 =======
 
 .. currentmodule:: ansys.pynexus
 
-.. autoattribute:: PyItem.collbls
+.. autoattribute:: PyItem.palette

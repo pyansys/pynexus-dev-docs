@@ -1,0 +1,6 @@
+line\_width
+===========
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.line_width

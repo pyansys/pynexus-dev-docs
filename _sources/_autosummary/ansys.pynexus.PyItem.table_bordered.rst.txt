@@ -1,0 +1,6 @@
+table\_bordered
+===============
+
+.. currentmodule:: ansys.pynexus
+
+.. autoattribute:: PyItem.table_bordered
